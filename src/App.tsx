@@ -13,6 +13,13 @@ import ReservationForm from './components/ReservationForm';
 import AdminDashboard from './components/AdminDashboard';
 import ForumBoard from './components/ForumBoard';
 
+// @ts-ignore
+import volcanoImage from './assets/images/teppanyaki_flaming_volcano_1780474158116.png';
+// @ts-ignore
+import loungeImage from './assets/images/modern_hibachi_lounge_1780474136358.png';
+// @ts-ignore
+import sushiImage from './assets/images/premium_sushi_rolls_1780474182317.png';
+
 // ==========================================
 // ADMIN CREDENTIALS CONFIGURATION:
 // Feel free to modify the username and password values below to secure your portal!
@@ -30,73 +37,73 @@ const categoryHighlights: Record<string, {
     title: 'The Art of Starters',
     subtitle: '🥟 Warm Delicacies',
     description: 'Crisp spring rolls, pan-fried gyoza pouches, and succulent tempura oysters chosen by our master chefs to awaken your palate.',
-    image: '/src/assets/images/teppanyaki_flaming_volcano_1780474158116.png'
+    image: volcanoImage
   },
   soup: {
     title: 'Simmered Broths',
     subtitle: '🥣 Traditional Kettle',
     description: 'Deep and delicate miso soups, lemongrass infused tom yum bowls, and clear button-mushroom teas.',
-    image: '/src/assets/images/modern_hibachi_lounge_1780474136358.png'
+    image: loungeImage
   },
   salad: {
     title: 'Crisp & Wholesome',
     subtitle: '🥗 Garden Greens',
     description: 'Fresh seaweed shreds, spicy kani ribbons, and toasted sesame-crusted tuna over organic baby crops.',
-    image: '/src/assets/images/premium_sushi_rolls_1780474182317.png'
+    image: sushiImage
   },
   sushisashimialacarte: {
     title: 'Nigiri & Raw Slices',
     subtitle: '🍣 Sashimi Carves',
     description: 'Sashimi-grade ocean-fresh salmon, yellowtail, fat unagi, and bluefin tuna served by individual handcrafted pieces.',
-    image: '/src/assets/images/premium_sushi_rolls_1780474182317.png'
+    image: sushiImage
   },
   classicrollandhandroll: {
     title: 'Classic Hand Rolls',
     subtitle: '🌯 Seaweed Treasures',
     description: 'Finest spicy salmon, crunchy shrimp tempura, and English cucumber wrapped snugly in toasted nori.',
-    image: '/src/assets/images/premium_sushi_rolls_1780474182317.png'
+    image: sushiImage
   },
   signaturerolls: {
     title: 'Chef Special Rolls',
     subtitle: '🐉 Majestic Dragons',
     description: 'Plump volcano rolls dripping in dynamic spicy dynamite cream, and Ithaca-inspired Finger Lakes masterpieces.',
-    image: '/src/assets/images/premium_sushi_rolls_1780474182317.png'
+    image: sushiImage
   },
   sushibarentrees: {
     title: 'The Sushi Banquet',
     subtitle: '🍱 Imperial Feasts',
     description: 'Vast wooden boats and bento boxes loaded with selected nigiris, custom sashimis, and classic spicy roll pairings.',
-    image: '/src/assets/images/premium_sushi_rolls_1780474182317.png'
+    image: sushiImage
   },
   riceandnoodles: {
     title: 'Wok Sizzled Staples',
     subtitle: '🍜 Comfort Skillets',
     description: 'Stir-fried pad thais, rich broth ramen, and savory soy-slicked yaki udon pan-seared over scorching heat.',
-    image: '/src/assets/images/teppanyaki_flaming_volcano_1780474158116.png'
+    image: volcanoImage
   },
   kitchenentrees: {
     title: 'Simmered & Seared',
     subtitle: '🍛 Teriyaki Glazes',
     description: 'Hickory-seared short ribs, crisp pork katsu cutlets, and thick green curries stewed in coconut milk.',
-    image: '/src/assets/images/modern_hibachi_lounge_1780474136358.png'
+    image: loungeImage
   },
   hibachidinners: {
     title: 'Teppanyaki Masterly',
     subtitle: '🔥 Theatrical Flames',
     description: 'Premium center-cut beef tenderloin, whole twin lobster tails, and giant shrimp seared live with garlic butter.',
-    image: '/src/assets/images/teppanyaki_flaming_volcano_1780474158116.png'
+    image: volcanoImage
   },
   drinks: {
     title: 'Ceremonial Sips',
     subtitle: '🍶 Sake & Refresher',
     description: 'Organic iced mango teas, fizzy ramune bottles, and premium warm Junmai Daiginjo flasks to lift your spirits.',
-    image: '/src/assets/images/modern_hibachi_lounge_1780474136358.png'
+    image: loungeImage
   },
   dessert: {
     title: 'Sweets & Confections',
     subtitle: '🍰 Golden Endings',
     description: 'Crunchy sweet banana tempura baskets and caramelized katsu cream cheese to conclude a pristine feast.',
-    image: '/src/assets/images/teppanyaki_flaming_volcano_1780474158116.png'
+    image: volcanoImage
   }
 };
 
@@ -447,7 +454,10 @@ export default function App() {
 
       {/* HERO SECTION / LANDING */}
       <section className="relative px-4 md:px-8 py-20 lg:py-36 overflow-hidden min-h-[85vh] flex items-center justify-center bg-zinc-950 border-b border-zinc-900">
-        <div className="absolute inset-0 bg-[url('/src/assets/images/modern_hibachi_lounge_1780474136358.png')] bg-cover bg-center opacity-[0.35] scale-105" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-[0.35] scale-105" 
+          style={{ backgroundImage: `url(${loungeImage})` }} 
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-zinc-950/40 pointer-events-none" />
         
         {/* Dynamic decorative light flares */}
@@ -590,7 +600,7 @@ export default function App() {
               <div className="bg-gradient-to-tr from-gold-400 via-amber-500 to-red-600 p-[1px] rounded-2xl glow-gold shadow-2xl">
                 <div className="bg-zinc-950 rounded-2xl overflow-hidden p-3 relative">
                   <img 
-                    src="/src/assets/images/teppanyaki_flaming_volcano_1780474158116.png" 
+                    src={volcanoImage} 
                     alt="Tokyo Hibachi Sizzling Teppanyaki Grill Chef Show" 
                     referrerPolicy="no-referrer"
                     className="w-full h-[400px] object-cover rounded-xl filter brightness-105"
@@ -772,7 +782,7 @@ export default function App() {
 
                 <div className="relative h-64 rounded-xl overflow-hidden mt-6 border border-zinc-950 shadow-inner group">
                   <img
-                    src={categoryHighlights[activeCategory]?.image || '/src/assets/images/modern_hibachi_lounge_1780474136358.png'}
+                    src={categoryHighlights[activeCategory]?.image || loungeImage}
                     alt="Featured culinary highlight plate"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-95"
