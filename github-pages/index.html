@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo Hibachi | Japanese & Hibachi Restaurant in Ithaca, NY</title>
+  <meta name="description" content="Savor the finest Japanese dining, premium hibachi teppanyaki grill shows, and hand-crafted sushi at Tokyo Hibachi in Ithaca, NY. Easy online table reservations!">
+  
+  <!-- Open Graph / Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tokyo Hibachi | Japanese & Hibachi Restaurant in Ithaca, NY">
+  <meta property="og:description" content="Experience dazzling teppanyaki shows and prime sushi platters in a premium, warm environment beside South Meadow Street.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&q=80">
+  <meta property="og:url" content="https://tokyoithaca.github.io">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Local Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Restaurant Schema Markup JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Tokyo Hibachi",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "722 S Meadow St",
+      "addressLocality": "Ithaca",
+      "addressRegion": "NY",
+      "postalCode": "14850",
+      "addressCountry": "US"
+    },
+    "telephone": "+16072778888",
+    "email": "tokyoithaca@gmail.com",
+    "priceRange": "$$",
+    "servesCuisine": "Japanese, Hibachi, Sushi Coals, Asian Grill",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "14:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "12:00",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "21:30"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Announcement Ticker -->
+  <div class="announcement">
+    🍣 EXPERIENCE ITHACA'S ULTIMATE SIZZLING HIBACHI PERFORMANCE • BOOK DIRECTLY ONLINE &nbsp; <a href="#reservation" class="announce-link">RESERVE NOW</a>
+  </div>
+
+  <!-- Header Section -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo">
+        <span class="logo-kanji">東京</span>
+        <span class="logo-text">TOKYO <span class="accent">HIBACHI</span></span>
+      </a>
+      <nav class="nav-links" id="menuLinks">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">The Experience</a>
+        <a href="#hours">Hours & Location</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#reservation" class="cta-nav">Table Booking</a>
+        <a href="#admin" class="admin-link">Admin Access</a>
+      </nav>
+      <!-- Mobile Toggler Button -->
+      <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Landing Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">PREMIER TEPPANYAKI & SUSHI BAR IN ITHACA</p>
+      <h1>Sizzling Fires & Crafted Rolls</h1>
+      <p class="hero-description">Welcome to Tokyo Hibachi, where fresh premium steaks, lobster, and house chef performance erupt on a 500°F teppan grill table.</p>
+      <div class="hero-cta">
+        <a href="#reservation" class="btn btn-primary">Book Teppanyaki Station</a>
+        <a href="#menu" class="btn btn-secondary">Explore Our Menus</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-tag">Our Heritage</span>
+          <h2>The Art of Teppanyaki</h2>
+          <p>Since establishing our grills at 722 S Meadow St, Tokyo Hibachi has defined Ithaca's premium dining scene, fusing ancient Japanese knife showmanship with high-quality USDA choice ribeyes, organic sea harvests, and traditional sake cups.</p>
+          <div class="features">
+            <div class="feat">🛡️ Premium USDA Steaks</div>
+            <div class="feat">🍣 Chef-Grade Sushi Bar</div>
+            <div class="feat">🔥 Family-Centered Dining</div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="video-placeholder">
+            <span>🔥 LIVE TEPPANYAKI Grills Sizzling Active Daily</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hibachi Experience Section -->
+  <section id="experience" class="exp-section">
+    <div class="section-container">
+      <div class="title-block">
+        <span class="section-tag">Interactive Teppan Gastronomy</span>
+        <h2>Master Culinary Acts</h2>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <span class="exp-icon">🔥</span>
+          <h3>Flashing Onion Volcano</h3>
+          <p>The fiery mountain tower engineered by our culinary masters. Erupts high-temp fireballs safely in real-time.</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-icon">🦐</span>
+          <h3>Flying Shrimp Catch</h3>
+          <p>Lively shrimp tossing exercises testing guest reflexes and catching precision directly at your workspace seats.</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-icon">🥩</span>
+          <h3>Spiced Butter Garlic Sear</h3>
+          <p>The rhythmic musical tap-dancing spatulas searing local NY meats inside aromatic garlic butter.</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-icon">💖</span>
+          <h3>Heart-Shaped Fried Rice</h3>
+          <p>Gently sculpted savory fried rice heartbeat drums, perfect for anniversaries, couples, and family birthdays.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authentic Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="section-container">
+      <div class="title-block">
+        <span class="section-tag">Cuisine Categories</span>
+        <h2>The Sizzling Menu Selection</h2>
+      </div>
+      <div class="menu-category-tabs">
+        <button class="tab-btn active" onclick="switchCategory('hibachi')">Hibachi Dinners</button>
+        <button class="tab-btn" onclick="switchCategory('sushi')">Specialty Rolls</button>
+        <button class="tab-btn" onclick="switchCategory('starters')">Appetizers</button>
+      </div>
+
+      <div class="menu-items-grid active-cat" id="menu-hibachi">
+        <div class="menu-card">
+          <div class="menu-header"><h4>Hibachi Chicken Dinner</h4> <span class="price">$22.95</span></div>
+          <p>Grilled with gourmet garlic oil, seasoned in butter salt. Includes fried rice & soup.</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-header"><h4>Hibachi NY Strip Steak</h4> <span class="price">$28.95</span></div>
+          <p>Prime aged choice strip steak cooked cleanly to temperature.</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-header"><h4>Imperial Filet Mignon</h4> <span class="price">$34.95</span></div>
+          <p>Center-cut premium tenderloin steak that melts deliciously.</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-header"><h4>Land & Sea Express Combo</h4> <span class="price">$38.95</span></div>
+          <p>Chicken breast, strip steak, and colossal coastal sea shrimp combo.</p>
+        </div>
+      </div>
+
+      <div class="menu-items-grid hidden" id="menu-sushi">
+        <div class="menu-card">
+          <div class="menu-header"><h4>Spicy Volcano Roll</h4> <span class="price">$15.95</span></div>
+          <p>Tuna avocado roll baked with premium scallop-crab crabmeat dynamites.</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-header"><h4>Ithaca Dragon Roll</h4> <span class="price">$14.95</span></div>
+          <p>Eel cucumber inside wrapped under avocado arrays, unagi dressing.</p>
+        </div>
+      </div>
+
+      <div class="menu-items-grid hidden" id="menu-starters">
+        <div class="menu-card">
+          <div class="menu-header"><h4>Crispy Gyoza (6pcs)</h4> <span class="price">$7.95</span></div>
+          <p>Crispy fried dumplings paired under citrus ponzu garlic dips.</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-header"><h4>Sea Salt Garlic Edamame</h4> <span class="price">$6.95</span></div>
+          <p>Steamed soy pads rolled in warm toasted garlic, flaked mineral salt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reservation" class="reserve-section">
+    <div class="section-container max-width-small">
+      <div class="title-block">
+        <span class="section-tag">Teppanyaki Slots</span>
+        <h2>Instantly Request Slots Online</h2>
+      </div>
+      
+      <div id="bookingResult" class="hide result-box"></div>
+
+      <form id="bookForm" onsubmit="submitLocalBooking(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="custName" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="custPhone" required placeholder="(607) 123-4567">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="custEmail" required placeholder="john@gmail.com">
+          </div>
+          <div class="form-group">
+            <label>Guests Size</label>
+            <select id="custGuests">
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="8">8 Guests</option>
+              <option value="10">10 Guests</option>
+              <option value="15">15 Guests (Teppanyaki limit)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Reservation Date</label>
+            <input type="date" id="custDate" required>
+          </div>
+          <div class="form-group">
+            <label>Dining Time</label>
+            <input type="time" id="custTime" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Special Celebration Notes / Dietary requests</label>
+          <textarea id="custRequest" rows="3" placeholder="Birthday celebration request, high chairs, GF requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Request Table Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Opening Hours & Maps -->
+  <section id="hours" class="hours-section">
+    <div class="section-container">
+      <div class="hours-grid">
+        <div class="hours-card">
+          <span class="section-tag">Dining Schedule</span>
+          <h2>Opening Hours</h2>
+          <div class="hours-row"><span>Monday – Thursday</span> <strong>2:00 PM – 10:00 PM</strong></div>
+          <div class="hours-row"><span>Friday – Saturday</span> <strong>12:00 PM – 11:00 PM</strong></div>
+          <div class="hours-row"><span>Sunday</span> <strong>12:00 PM – 9:30 PM</strong></div>
+          <div class="hours-contact">
+            📞 Call Direct: <a href="tel:6072778888" class="gold">(607) 277-8888</a>
+          </div>
+        </div>
+        <div class="location-card">
+          <span class="section-tag">Our Location</span>
+          <h2>Tokyo Hibachi Ithaca</h2>
+          <p>Find us in the Meadow Court plaza at:</p>
+          <p class="address">📍 722 S Meadow St, Ithaca, NY 14850</p>
+          <a href="https://maps.google.com/?q=722+S+Meadow+St,+Ithaca,+NY+14850" target="_blank" class="btn btn-secondary w-full">Get Google Navigation GPS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews" class="reviews-section">
+    <div class="section-container">
+      <div class="title-block">
+        <span class="section-tag">Community Love</span>
+        <h2>Patron Reviews & Stars</h2>
+      </div>
+      <div class="reviews-grid" id="reviewsContainer">
+        <!-- Dyn contents go here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer class="footer">
+    <div class="section-container align-center">
+      <h2>Tokyo Hibachi</h2>
+      <p>Ithaca's Premier Asian Steakhouse & Teppanyaki Lounge</p>
+      <p class="email">📩 Email support: tokyoithaca@gmail.com | ☎️ Phone: (607) 277-8888</p>
+      <p class="terms">© 2026 Tokyo Hibachi. All rights reserved. Open-source under GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Admin Anchor Container -->
+  <section id="admin" class="admin-panel-section bg-dark">
+    <div class="section-container max-width-small">
+      <div class="admin-shield text-center">
+        <h2>Admin Management Portal</h2>
+        <p class="notice">Enter security credentials to monitor incoming tables and statuses</p>
+        <div id="adminLoginArea">
+          <form onsubmit="handleStaticLogin(event)">
+            <input type="text" id="adminUser" placeholder="Username" required class="w-full">
+            <input type="password" id="adminPass" placeholder="Password" required class="w-full">
+            <button type="submit" class="btn btn-secondary w-full">Access Admin Suite</button>
+          </form>
+        </div>
+        <div id="adminPanelResult" class="hide font-sans">
+          <div class="stats-grid">
+            <div class="stat-box">Total: <b id="statTotal">0</b></div>
+            <div class="stat-box">Confirmed: <b id="statConfirm">0</b></div>
+          </div>
+          <div class="table-container shadow">
+            <div id="bookingsListDiv">No bookings found inside localStorage.</div>
+          </div>
+          <button onclick="handleLogout()" class="btn btn-danger font-mono font-bold uppercase py-2 hover:bg-red-500 w-full">Log Out</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

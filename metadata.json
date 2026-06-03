@@ -1,0 +1,6 @@
+{
+  "name": "Tokyo Hibachi",
+  "description": "Authentic Japanese Steakhouse & Sushi Bar. Experience Ithaca's premier Hibachi Dining, Table Showmanship, and Fresh Sushi. Reserve tables online and manage bookings in an integrated admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
