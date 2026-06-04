@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Tokyo Hibachi
 
-# Run and deploy your AI Studio app
+Vercel-ready Next.js restaurant website with a server-side admin dashboard.
 
-This contains everything you need to run your app locally.
+## Admin
 
-View your app in AI Studio: https://ai.studio/apps/24a8f4dc-69cb-49d9-ab63-f8b4e53b7585
+- `/admin` redirects to `/admin/login` when signed out.
+- Username: `admin`
+- Password: `anaPZyJN135vll`
 
-## Run Locally
+## Required Vercel Environment Variables
 
-**Prerequisites:**  Node.js
+```env
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=anaPZyJN135vll
+SESSION_SECRET=change-this-long-random-secret
+```
 
+## Database
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Run `supabase-schema.sql` in Supabase SQL editor.
