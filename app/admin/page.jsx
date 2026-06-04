@@ -2,6 +2,8 @@ import { redirect } from "next/navigation";
 import { dashboardStats, isDatabaseConfigured, listBookings } from "../../lib/db";
 import { isAdminLoggedIn } from "../../lib/auth";
 
+export const dynamic = "force-dynamic";
+
 const statuses = ["NEW", "CONTACTED", "SCHEDULED", "IN_PROGRESS", "RESOLVED", "CANCELLED"];
 const priorities = ["STANDARD", "EXPRESS", "EMERGENCY"];
 
