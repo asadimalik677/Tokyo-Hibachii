@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "plugins": [{ "name": "next" }]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "app/**/*.js", "app/**/*.jsx", "lib/**/*.js", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "src", "dist", "work"]
 }
