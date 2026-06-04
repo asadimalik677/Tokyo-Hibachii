@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import { isAdminLoggedIn } from "../../../lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export default async function LoginPage({ searchParams }) {
   if (await isAdminLoggedIn()) redirect("/admin");
   const params = await searchParams;
