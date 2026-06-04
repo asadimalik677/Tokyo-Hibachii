@@ -9,9 +9,16 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body class="admin-page">
+  <header class="admin-topbar">
+    <a class="brand" href="../"><span>Tokyo Hibachi</span><strong>Operations dashboard</strong></a>
+    <div>
+      <a class="admin-toplink" href="../">View site</a>
+      <button class="admin-toplink" id="logoutButton" type="button">Sign out</button>
+    </div>
+  </header>
   <main class="admin-page-shell">
     <section class="admin-shell">
-      <div class="modal-top">
+      <div class="modal-top login-heading">
         <div>
           <p class="eyebrow">Tokyo Hibachi Admin</p>
           <h1>Reservation Dashboard</h1>
@@ -28,16 +35,28 @@
       </form>
       <div class="dashboard is-hidden" id="dashboard">
         <div class="dashboard-top">
-          <div><h3>Admin Dashboard</h3><p>Update reservation status, review details, or delete a booking.</p></div>
-          <button class="btn btn-light" id="logoutButton" type="button">Logout</button>
+          <div><h3>Bookings & Tickets</h3><p>Search, filter, update status, open details, or delete reservations.</p></div>
         </div>
         <div class="dashboard-cards">
           <div><span>Total bookings</span><strong id="totalBookings">0</strong></div>
           <div><span>Pending</span><strong id="pendingBookings">0</strong></div>
           <div><span>Confirmed</span><strong id="confirmedBookings">0</strong></div>
           <div><span>Completed</span><strong id="completedBookings">0</strong></div>
+          <div><span>Today</span><strong id="todayBookings">0</strong></div>
         </div>
-        <div class="booking-list" id="bookingList"></div>
+        <div class="admin-filters">
+          <label>Search<input type="search" id="bookingSearch" placeholder="Name, phone, email, request..."></label>
+          <label>Status<select id="statusFilter"><option value="All">All statuses</option><option>Pending</option><option>Confirmed</option><option>Completed</option></select></label>
+          <label>Date<select id="dateFilter"><option value="All">All dates</option><option value="Today">Today</option><option value="Upcoming">Upcoming</option><option value="Past">Past</option></select></label>
+          <button class="btn btn-dark" id="clearFilters" type="button">Clear</button>
+        </div>
+        <div class="booking-table-wrap">
+          <table class="booking-table">
+            <thead><tr><th>Ref</th><th>Customer</th><th>Date / Time</th><th>Guests</th><th>Status</th><th>Created</th><th></th></tr></thead>
+            <tbody id="bookingList"></tbody>
+          </table>
+        </div>
+        <section class="detail-panel is-hidden" id="detailPanel"></section>
       </div>
     </section>
   </main>
